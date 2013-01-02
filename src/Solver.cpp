@@ -26,7 +26,8 @@ namespace {
 
 bool GlobFit::createMatlabArraies()
 {
-    matlabEngine = engOpen(NULL);
+    // matlabEngine = engOpen(NULL);
+    matlabEngine = engOpen("matlab -nodesktop");
     if (NULL == matlabEngine) {
         fprintf(stderr, "Could not initialize the engine.\n");
         return false;
