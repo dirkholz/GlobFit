@@ -1,0 +1,23 @@
+for file in *.h; do diff $file ../globfit/include/$file | colordiff; done
+5a6,7
+> #include <cstddef>
+> #include <cmath>
+33c35
+< #endif // ColorMap_H
+\ No newline at end of file
+---
+> #endif // ColorMap_H
+3a4,5
+> #include <cstddef>
+> 
+3a4,5
+> #include <cmath>
+> 
+17c19
+< #endif // Viewer_H
+\ No newline at end of file
+---
+> #endif // Viewer_H
+
+
+
