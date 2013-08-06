@@ -1,3 +1,5 @@
+/* -*- Mode: c++; tab-width: 2; c-basic-offset: 2; indent-tabs-mode: nil -*- */
+/* vim:set softtabstop=2 shiftwidth=2 tabstop=2 expandtab: */
 #include <boost/graph/breadth_first_search.hpp>
 #include <boost/graph/biconnected_components.hpp>
 #include <boost/graph/connected_components.hpp>
