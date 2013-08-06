@@ -9,25 +9,25 @@ class Primitive;
 
 class RelationEdge
 {
-    friend std::ostream& operator<<(std::ostream &out, const RelationEdge& relationEdge);
-public:
+  friend std::ostream& operator<<(std::ostream &out, const RelationEdge& relationEdge);
+  public:
     enum RelationEdgeType {
-        // Orientation
-        RET_PARALLEL,
-        RET_ORTHOGONAL,
-        RET_EQUAL_ANGLE,
+      // Orientation
+      RET_PARALLEL,
+      RET_ORTHOGONAL,
+      RET_EQUAL_ANGLE,
 
-        // Placement
-        RET_COAXIAL,
-        RET_COPLANAR,
+      // Placement
+      RET_COAXIAL,
+      RET_COPLANAR,
 
-        // Equality
-        RET_EQUAL_LENGTH,
-        RET_EQUAL_RADIUS
+      // Equality
+      RET_EQUAL_LENGTH,
+      RET_EQUAL_RADIUS
     };
     RelationEdge() {}
     RelationEdge(RelationEdgeType relationEdgeType, RelationVertex source, RelationVertex target, double score=1.0):
-        _relationEdgeType(relationEdgeType), _source(source), _target(target), _score(score) {}
+      _relationEdgeType(relationEdgeType), _source(source), _target(target), _score(score) {}
     ~RelationEdge() {}
 
     static size_t getNumParameter() {return 8;}
@@ -41,7 +41,7 @@ public:
 
     bool operator<(const RelationEdge& other) const {return _score < other.getScore();}
 
-private:
+  private:
     RelationEdgeType    _relationEdgeType;
     RelationVertex      _source;
     RelationVertex      _target;

@@ -1,4 +1,4 @@
- #ifndef Cone_H
+#ifndef Cone_H
 #define Cone_H
 
 
@@ -7,7 +7,7 @@
 
 class Cone : public Primitive
 {
-public:
+  public:
     Cone(const std::vector<RichPoint*>& vecPointSet);
     ~Cone(void);
 
@@ -18,12 +18,12 @@ public:
 
     virtual bool getNormal(Vector& normal) const {normal = _normal; return true;}
     virtual bool getCenter(Point& center) const {center = _apex; return true;}
-protected:
+  protected:
     virtual bool loadParameters(const std::string& line);
     virtual bool saveParameters(std::ofstream& fout) const;
     virtual void computePrecision();
 
-private:
+  private:
     Vector      _normal;
     Point       _apex;
     double      _angle;

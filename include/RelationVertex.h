@@ -5,7 +5,7 @@
 
 class RelationVertex
 {
-public:
+  public:
     RelationVertex() {}
     RelationVertex(size_t idx, size_t primitiveIdx1);
     RelationVertex(size_t idx, size_t primitiveIdx1, size_t primitiveIdx2);
@@ -21,10 +21,10 @@ public:
     void setIdx(size_t idx) {_idx = idx;}
 
     bool operator<(const RelationVertex& other) const;
-private:
+  private:
     enum RelationVertexType {
-        RVT_SINGLE_PRIMITIVE,
-        RVT_DOUBLE_PRIMITIVE
+      RVT_SINGLE_PRIMITIVE,
+      RVT_DOUBLE_PRIMITIVE
     };
     RelationVertexType _relationVertexType;
 

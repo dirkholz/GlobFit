@@ -10,17 +10,17 @@
 #include "Types.h"
 
 namespace osg {
-    class Group;
+  class Group;
 }
 
 class Primitive
 {
-public:
+  public:
     enum PrimitiveType {
-        PT_PLANE,
-        PT_SPHERE,
-        PT_CYLINDER,
-        PT_CONE
+      PT_PLANE,
+      PT_SPHERE,
+      PT_CYLINDER,
+      PT_CONE
     };
 
 
@@ -39,11 +39,11 @@ public:
     virtual void prepareParameters() = 0;
     virtual void applyParameters() = 0;
     /*
-    Parameter format:
-    Plane:      normalX normalY normalZ empty   empty   empty   distance
-    Cylinder:   normalX normalY normalZ pointX  pointY  pointZ  radius
-    Cone:       normalX normalY normalZ apexX   apexY   apexZ   angle
-    Sphere:     empty   empty   empty   centerX centerY centerZ radius
+      Parameter format:
+      Plane:      normalX normalY normalZ empty   empty   empty   distance
+      Cylinder:   normalX normalY normalZ pointX  pointY  pointZ  radius
+      Cone:       normalX normalY normalZ apexX   apexY   apexZ   angle
+      Sphere:     empty   empty   empty   centerX centerY centerZ radius
     */
 
     virtual bool getNormal(Vector& normal) const {return false;}
@@ -57,7 +57,7 @@ public:
 
     size_t getIdx() const {return _idx;}
     void setIdx(size_t idx) {_idx = idx;}
-protected:
+  protected:
     virtual bool loadParameters(const std::string& line) = 0;
     virtual bool saveParameters(std::ofstream& fout) const = 0;
     virtual void computePrecision() = 0;
@@ -68,7 +68,7 @@ protected:
     PrimitiveType                   _primitiveType;
     double                          _parameters[8];
     size_t                          _idx;
-private:
+  private:
 };
 
 #endif // Primitive_H

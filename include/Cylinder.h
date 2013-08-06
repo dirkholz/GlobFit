@@ -6,7 +6,7 @@
 
 class Cylinder : public Primitive
 {
-public:
+  public:
     Cylinder(const std::vector<RichPoint*>& vecPointSet);
     ~Cylinder(void);
 
@@ -19,12 +19,12 @@ public:
     virtual bool getRadius(double& radius) const {radius = _radius; return true;}
     virtual bool getCenter(Point& center) const {center = _point; return true;}
 
-protected:
+  protected:
     virtual bool loadParameters(const std::string& line);
     virtual bool saveParameters(std::ofstream& fout) const;
     virtual void computePrecision();
 
-private:
+  private:
     Vector      _normal;
     Point       _point;
     double      _radius;

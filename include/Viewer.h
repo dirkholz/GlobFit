@@ -4,12 +4,12 @@
 #include <cmath>
 
 namespace osg {
-    class Node;
+  class Node;
 }
 
 class Viewer
 {
-public:
+  public:
     Viewer();
     ~Viewer(void);
 

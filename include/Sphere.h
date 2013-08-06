@@ -8,7 +8,7 @@
 
 class Sphere : public Primitive
 {
-public:
+  public:
     Sphere(const std::vector<RichPoint*>& vecPointSet);
     ~Sphere(void);
 
@@ -20,12 +20,12 @@ public:
     virtual bool getRadius(double& radius) const {radius = _radius; return true;}
     virtual bool getCenter(Point& center) const {center = _center; return true;}
 
-protected:
+  protected:
     virtual bool loadParameters(const std::string& line);
     virtual bool saveParameters(std::ofstream& fout) const;
     virtual void computePrecision();
 
-private:
+  private:
     Point       _center;
     double      _radius;
 };

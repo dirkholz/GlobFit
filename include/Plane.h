@@ -8,7 +8,7 @@
 
 class Plane : public Primitive
 {
-public:
+  public:
     Plane(const std::vector<RichPoint*>& vecPointSet);
     ~Plane(void);
 
@@ -19,12 +19,12 @@ public:
 
     virtual bool getNormal(Vector& normal) const {normal = _normal; return true;}
     virtual bool getDistance(double& distance) const {distance = _distance; return true;}
-protected:
+  protected:
     virtual bool loadParameters(const std::string& line);
     virtual bool saveParameters(std::ofstream& fout) const;
     virtual void computePrecision();
 
-private:
+  private:
     Vector      _normal;
     double      _distance;
 };

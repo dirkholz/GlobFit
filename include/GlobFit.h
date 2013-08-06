@@ -11,12 +11,12 @@ struct  RichPoint;
 class   Primitive;
 
 namespace osg{
-    class Node;
+  class Node;
 }
 
 class GlobFit
 {
-public:
+  public:
     GlobFit(void);
     ~GlobFit(void);
 
@@ -48,7 +48,7 @@ public:
 
     static void computeEdgeScore(RelationEdge& relationEdge, const std::vector<Primitive*>& vecPrimitive);
 
-protected:
+  protected:
     bool solve(std::vector<RelationEdge>& vecEdge, RelationEdge::RelationEdgeType currentStage, const std::string& stageName);
     void dumpData(const std::vector<RelationEdge>& vecEdge, const std::string& stageName);
 
@@ -61,7 +61,7 @@ protected:
     bool equalLengthAlignment(double equalLengthThreshold);
     bool equalRadiusAlignment(double equalRadiusThreshold);
 
-private:
+  private:
     std::vector<RichPoint*>     _vecPointSet;
     std::vector<Primitive*>     _vecPrimitive;
 

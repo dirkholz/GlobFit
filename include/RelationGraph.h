@@ -10,9 +10,9 @@
 using namespace boost;
 
 struct EdgeProp {
-    RelationEdge::RelationEdgeType edgeType;
-    double score;
-    EdgeProp(RelationEdge::RelationEdgeType initEdgeType=RelationEdge::RET_PARALLEL, double initScore=1.0):edgeType(initEdgeType), score(initScore){}
+  RelationEdge::RelationEdgeType edgeType;
+  double score;
+  EdgeProp(RelationEdge::RelationEdgeType initEdgeType=RelationEdge::RET_PARALLEL, double initScore=1.0):edgeType(initEdgeType), score(initScore){}
 };
 
 typedef adjacency_list<setS, vecS, undirectedS, RelationVertex, EdgeProp> Graph;

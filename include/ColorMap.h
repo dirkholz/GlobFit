@@ -22,8 +22,8 @@ public:
 
 private:
     ColorMap();                            // ctor hidden
-    ColorMap(ColorMap const&){}            // copy ctor hidden
-    ColorMap& operator=(ColorMap const&){} // assign op. hidden
+    // ColorMap(ColorMap const&){}            // copy ctor hidden
+    // colormap& operator=(ColorMap const&){} // assign op. hidden
     ~ColorMap(){}                          // dtor hidden
 
     std::vector<osg::Vec4> _jet;
