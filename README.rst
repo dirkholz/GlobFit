@@ -1,7 +1,7 @@
 GlobFit
 =======
 
-This is a fork of the original implementation of GlobFit_. The sources have been adapted to compile cleanly under recent Linux distributions such as the latest stable Ubuntu release 12.04.
+This is a fork of the original implementation of GlobFit_. The sources have been adapted to compile cleanly under recent Linux distributions such as the latest stable Ubuntu release 12.04 and to use cmake instead of VC++.
 From the GlobFit_ website:
   
   Given a noisy and incomplete point set, we introduce a method that simultaneously recovers a set of locally fitted primitives along with their global mutual relations. 
